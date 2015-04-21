@@ -1,7 +1,13 @@
 /*-- Chart --*/
 .c3 svg {
-  font: 10px sans-serif; }
+  font: 10px sans-serif;
+  margin-top:40px;
 
+}
+
+html{
+  padding:0 0 0 0;
+}
 .c3 path, .c3 line {
   fill: none;
   stroke: #000; }
@@ -163,12 +169,18 @@
 
 body{
   font-family:sans-serif;
-  padding-top:60px;
+  padding:0 0 0 0;
+  width:100%;
+
 }
 
 h1,h3{
   display:block;
   margin:20px 0 20px 0;
+}
+h3{
+  margin-top:60px;
+  margin-bottom:40px;
 }
 
 table{
@@ -186,7 +198,8 @@ tr,td,th{
 }
 
 th{
-  background-color:#c5c5b5;
+  border
+  background-color:#7ca1bb;
 }
 
 header{
@@ -194,8 +207,10 @@ header{
   height:40px;
   background-color:#222;
   color:white;
-  position:absolute;
+  position:fixed;
     top:0;
     left:0;
-
+  z-index:-1;
+  display:block;
 }
+

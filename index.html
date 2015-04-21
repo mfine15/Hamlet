@@ -7,67 +7,67 @@
     <script src="./c3/c3.js"></script>
   </head>
   <body>
-    <header>
       <center><h1>Hamlet Sentiment Analysis</h1></center>
-    </header>
     <div id="chart"></div>
     <div id="lineChart"></div>
 
-    <center><h3> Sentiment Correlations</h3></center>
+    <div id="correlations">
+      <center><h3> Sentiment Correlations</h3></center>
 
-    <table>
-      <tr>
-        <th> </th>
-        <th>Play </th>
-        <th>Hamlet</th>
-        <th>Polonious</th>
-        <th>Ghost</th>
-        <th>Horatio</th>
-      </tr>
+      <table>
+        <tr>
+          <th> </th>
+          <th>Play </th>
+          <th>Hamlet</th>
+          <th>Polonious</th>
+          <th>Ghost</th>
+          <th>Horatio</th>
+        </tr>
 
 
 
-      <tr>
-        <th>Play</th>
-        <td>1.0</td>
-        <td>-0.11</td>
-        <td>0.402</td>
-        <td>0.635</td>
-        <td>0.064</td>
-      </tr>
-      <tr>
-        <th>Hamlet</th>
-        <td>-0.11</td>
-        <td>1.0</td>
-        <td>-0.398</td>
-        <td>-0.477</td>
-        <td>-0.188</td>
-      </tr>
-      <tr>
-        <th>Polonious</th>
-        <td>0.402</td>
-        <td>-0.398</td>
-        <td>1.0</td>
-        <td>0.9239</td>
-        <td>0.219</td>
-      </tr>
-      <tr>
-        <th>Ghost</th>
-        <td>0.635</td>
-        <td>-0.477</td>
-        <td>0.402</td>
-        <td>1.0</td>
-        <td>0.883</td>
-      </tr>
-      <tr>
-        <th>Horatio</th>
-        <td>0.064</td>
-        <td>-0.188</td>
-        <td>0.219</td>
-        <td>0.883</td>
-        <td>1.0</td>
-      </tr>
-    </table>
+        <tr>
+          <th>Play</th>
+          <td>1.0</td>
+          <td>-0.11</td>
+          <td>0.402</td>
+          <td>0.635</td>
+          <td>0.064</td>
+        </tr>
+        <tr>
+          <th>Hamlet</th>
+          <td>-0.11</td>
+          <td>1.0</td>
+          <td>-0.398</td>
+          <td>-0.477</td>
+          <td>-0.188</td>
+        </tr>
+        <tr>
+          <th>Polonious</th>
+          <td>0.402</td>
+          <td>-0.398</td>
+          <td>1.0</td>
+          <td>0.9239</td>
+          <td>0.219</td>
+        </tr>
+        <tr>
+          <th>Ghost</th>
+          <td>0.635</td>
+          <td>-0.477</td>
+          <td>0.402</td>
+          <td>1.0</td>
+          <td>0.883</td>
+        </tr>
+        <tr>
+          <th>Horatio</th>
+          <td>0.064</td>
+          <td>-0.188</td>
+          <td>0.219</td>
+          <td>0.883</td>
+          <td>1.0</td>
+        </tr>
+      </table>
+    </div>
 
 
     <script>
@@ -139,6 +139,10 @@
         axis: {
           x: {
             type: 'category',
+            label: {
+              text:'Act.Scene',
+              position: 'inner-center'
+            },
             categories: sceneCategories
           },
           y: {
